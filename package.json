@@ -4,9 +4,11 @@
   "description": "A feature-rich platform designed to streamline project management and communication for teams and individuals.",
   "main": "src/server.js",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "start": "svelte-kit start",
+    "dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
     "prisma": "prisma"
   },
   "dependencies": {
@@ -25,7 +27,13 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.0",
     "prettier": "^2.3.2",
-    "typescript": "^4.4.2"
+    "@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.20.4",
+		"svelte": "^4.0.0",
+		"svelte-check": "^3.4.3",
+		"typescript": "^5.0.0",
+		"vite": "^4.3.6"
+
   },
   "type": "module",
   "engines": {
