@@ -1,5 +1,4 @@
-```typescript
-import { writable } from 'svelte/store';
+import { writable } from "svelte/store";
 
 // Create writable stores for shared variables
 export const user = writable(null);
@@ -15,7 +14,7 @@ export function generateId() {
 // Function to validate form inputs
 export function validateForm(inputs: any) {
   for (let key in inputs) {
-    if (inputs[key] === '') {
+    if (inputs[key] === "") {
       return false;
     }
   }
@@ -30,4 +29,3 @@ export function handleFormSubmit(event: Event) {
   const data = Object.fromEntries(formData.entries());
   return data;
 }
-```

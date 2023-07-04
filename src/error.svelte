@@ -1,4 +1,3 @@
-```svelte
 <script>
   import { error } from '$app/stores';
 </script>
@@ -25,4 +24,3 @@
     overflow: auto;
   }
 </style>
-```

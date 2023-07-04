@@ -1,4 +1,3 @@
-```svelte
 <script>
   import { user } from '$lib/auth.ts';
   import { goto } from '$app/navigation';
@@ -22,4 +21,3 @@
 </nav>
 
 <slot />
-```

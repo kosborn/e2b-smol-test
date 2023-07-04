@@ -1,4 +1,3 @@
-```svelte
 <script>
   import { onMount } from 'svelte';
   import { user } from '$lib/auth.ts';
@@ -39,4 +38,3 @@
     margin-top: 0.5em;
   }
 </style>
-```

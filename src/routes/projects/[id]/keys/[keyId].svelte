@@ -1,4 +1,3 @@
-```svelte
 <script context="module" lang="ts">
   import { loadApiKey } from '$lib/api';
   import type { ApiKey } from '$lib/db';
@@ -22,4 +21,3 @@
     <p>Last Used: {apiKey.lastUsed}</p>
   </div>
 </main>
-```

@@ -1,4 +1,3 @@
-```svelte
 <script lang="ts">
   import { onMount } from 'svelte';
   import { user } from '$lib/auth.ts';
@@ -25,4 +24,3 @@
   <p><strong>Email:</strong> {userData.email}</p>
   <p><strong>Joined:</strong> {new Date(userData.createdAt).toLocaleDateString()}</p>
 </div>
-```
