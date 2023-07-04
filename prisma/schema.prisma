@@ -1,0 +1,51 @@
+```prisma
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  email     String    @unique
+  password  String
+  projects  Project[]
+}
+
+model Project {
+  id          Int         @id @default(autoincrement())
+  name        String
+  userId      Int
+  user        User        @relation(fields: [userId], references: [id])
+  serviceKey  ServiceKey?
+  apiKeys     ApiKey[]
+  messages    Message[]
+}
+
+model ServiceKey {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique
+  projectId Int
+  project   Project  @relation(fields: [projectId], references: [id])
+}
+
+model ApiKey {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique
+  projectId Int
+  project   Project  @relation(fields: [projectId], references: [id])
+  messages  Message[]
+}
+
+model Message {
+  id      Int      @id @default(autoincrement())
+  content String
+  apiKeyId Int
+  apiKey  ApiKey  @relation(fields: [apiKeyId], references: [id])
+  projectId Int
+  project Project @relation(fields: [projectId], references: [id])
+}
+```
