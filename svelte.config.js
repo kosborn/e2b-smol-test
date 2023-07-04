@@ -1,6 +1,5 @@
-import preprocess from "svelte-preprocess";
 import adapter from '@sveltejs/adapter-auto';
-import pkg from "./package.json";
+
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   plugins: [
     require('postcss-import'),
     require('postcss-nested'),
@@ -6,3 +6,5 @@ module.exports = {
     require('autoprefixer'),
   ],
 };
+
+module.exports = config
